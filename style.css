@@ -7,6 +7,9 @@ body{
     overflow-x: hidden;
     max-width: 100%;
 }
+body > div{
+    padding: 0 10%;
+}
 nav{
     position: fixed;
     width: 100%;
@@ -38,6 +41,7 @@ nav.sticky {
     padding: 8px 12px;
     /* font-size: 18px; */
     position: relative;
+    cursor: pointer;
 }
 #navbar a {
     text-decoration: none;
@@ -129,14 +133,78 @@ nav.sticky {
     padding: 10px 10%;
     background-color: hsl(220, 16%, 96%);
 }
-.mid-section h2{
+.mid-section > h2, .bottom-section > h2{
     font-weight: 300;
     font-size: 2.5rem;
     line-height: 4rem;
     color: hsl(233, 26%, 24%);
     margin-bottom: 1rem;
 }
-.mid-section p{
+.mid-section > p{
     font-size: 18px;
     color: hsl(233, 8%, 62%);
+}
+.info-grid, .bottom-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.info-grid h3{
+    color: hsl(233, 26%, 24%);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.info-grid p{
+    color: hsl(233, 8%, 62%);
+    font-size: 18px;
+    font-weight: 300;
+}
+#mid .info-grid > div{
+    overflow: hidden;
+    transition: 0.5s;
+    padding: 12px;
+    border-radius: 12px;
+}
+#mid .info-grid > div:hover{
+    transform: scale(1.1);
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.08);
+}
+
+
+/* BOTTOM-SECTION */
+.bottom-section{
+    padding: 10px 10%;
+}
+.bottom-grid{
+    margin-top: 1rem;
+    overflow: hidden;
+}
+.bottom-grid img{
+    width: 100%;
+    aspect-ratio: 4/3;
+    transition: 0.3s;
+}
+/* .bottom-grid img:hover{
+    transform: scale(1.1);
+} */
+.bottom-grid h3, .bottom-grid p{
+    padding-left: 20px;
+    width: 80%;
+}
+.bottom-grid h3{
+    font-size: 1.2rem;
+}
+.bottom-grid h3:hover{
+    color: hsl(136, 65%, 51%);
+    cursor: pointer;
+}
+.bottom-grid p{
+    font-size: 12px;
+}
+.footer{
+    background-color: hsl(233, 26%, 24%);
 }
