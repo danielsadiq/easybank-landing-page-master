@@ -206,7 +206,39 @@ nav.sticky {
     font-size: 12px;
 }
 .footer{
+    display: flex;
+    align-items: center;
     background-color: hsl(233, 26%, 24%);
+    color: white;
+    gap: 100px;
+    /* justify-content: space-between; */
+}
+.footer ul{
+    list-style-type: none;
+    padding-left: 0px;
+}
+.footer li {
+    padding: 12px 2px;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+}
+.col:nth-child(1){
+    gap: 40px;
+}
+.col:nth-child(1) > .row:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+}
+.col:nth-child(1) > .row:nth-child(2) img:hover{
+    color: hsl(136, 65%, 51%);
+    cursor: pointer;
+}
+.col:nth-last-child(1){
+    flex: 1;
+    align-items: flex-end;
+    color: hsl(233, 8%, 62%);
 }
 
 @media screen and (max-width: 768px) {
